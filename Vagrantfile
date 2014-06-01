@@ -5,10 +5,6 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # All Vagrant configuration is done here. The most common configuration
-  # options are documented and commented below. For a complete reference,
-  # please see the online documentation at vagrantup.com.
-
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
 
@@ -23,15 +19,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
 
-  # If true, then any SSH connections made will enable agent forwarding.
-  # Default value: false
-  # config.ssh.forward_agent = true
-
   ###
   # Other
   ###
-  config.vm.post_up_message = "JetStream testing backend has started! Make sure to read the readme!"
-  config.vm.provision :shell do |sh|
+  config.vm.provision "shell", run: "always" do |sh|
     sh.path = './setup.sh'
   end
 end
