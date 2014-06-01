@@ -2,10 +2,14 @@ jetstream-vagrant
 =================
 
 ## How to use
-- Make sure you have Vagrant installed (http://www.vagrantup.com/)
+- Make sure you have all depends installed
 - Clone this repo
 - When inside this repo, run `vagrant up`
 - All done! Now all applications are set up and running!
+
+#### Depends
+- Virtualbox
+- Vagrant (http://www.vagrantup.com/)
 
 ## What you have access too
 - Rethinkdb web admin (via port 8080)
