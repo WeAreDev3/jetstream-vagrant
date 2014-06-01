@@ -1,7 +1,7 @@
 # Setup
-sudo add-apt-repository ppa:rethinkdb/ppa -y;
-sudo apt-get update -q;
-sudo apt-get install -y -q byobu redis-server rethinkdb htop;
+sudo add-apt-repository ppa:rethinkdb/ppa -y > /dev/null;
+sudo apt-get update > /dev/null;
+sudo apt-get install -y byobu redis-server rethinkdb htop > /dev/null;
 
 sudo -u vagrant -H byobu-launcher-install
 
