@@ -6,4 +6,4 @@ sudo apt-get install -y byobu redis-server rethinkdb htop > /dev/null;
 sudo -u vagrant -H byobu-launcher-install
 
 sudo -u vagrant -H rethinkdb --bind all &
-sudo -u vagrant -H redis-server --port 6868 &
+sudo -u vagrant -H redis-server /vagrant/redis.conf  &
