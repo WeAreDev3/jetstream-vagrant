@@ -33,7 +33,7 @@ if [[ ! -f /home/vagrant/init ]]; then
     &> /home/vagrant/setup.log;
     echo 'Setup DB tables';
 
-    sudo -u vagrant -H touch init;
+    sudo -u vagrant -H touch /home/vagrant/init;
 fi
 
 echo 'JetStream testing backend has started! Make sure to read the readme!'
